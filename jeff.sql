@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `comment` (
   `id` int(11) NOT NULL,
   `post_id` bigint(20) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `comment` varchar(255) NOT NULL,
   `approved_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
@@ -40,7 +40,7 @@ CREATE TABLE `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`id`, `post_id`, `email`, `comment`, `approved_at`, `created_at`) VALUES
+INSERT INTO `comment` (`id`, `post_id`, `username`, `comment`, `approved_at`, `created_at`) VALUES
 (1, 1, 'devburna@gmail.com', 'Hello World', '2021-08-25 21:04:32', '2021-08-25 21:03:56'),
 (2, 1, 'tiimmyburner@gmail.com', 'Hello World', NULL, '2021-08-25 21:04:23');
 

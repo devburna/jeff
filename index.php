@@ -22,8 +22,8 @@
                         <div class="card-body">
                             <form action="comment.php" method="POST">
                                 <div class="form-floating mb-3 fs-6">
-                                    <input type="email" class="form-control shadow-none" id="email" name="email" placeholder="name@example.com">
-                                    <label for="email">Email address</label>
+                                    <input type="username" class="form-control shadow-none" id="username" name="username" placeholder="">
+                                    <label for="username">Username</label>
                                 </div>
                                 <div class="mb-4 fs-6">
                                     <label for="comment" class="mb-2">Comment</label>
@@ -44,7 +44,7 @@
                                                     <img src="https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar.png" alt="Avatar" width="50" height="50" class="rounded-circle shadow-sm">
                                                 </div>
                                                 <div>
-                                                    <strong class="d-block"><?php echo $comment['email'] ?></strong>
+                                                    <strong class="d-block"><?php echo $comment['username'] ?></strong>
                                                     <span><?php echo $comment['comment'] ?></span>
                                                 </div>
                                                 <div class="ms-auto">

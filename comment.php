@@ -76,9 +76,9 @@ class Comment
 
     public function store()
     {
-        $email = $this->request['email'];
+        $username = $this->request['username'];
         $comment = $this->request['comment'];
-        if (!$email || !$comment) {
+        if (!$username || !$comment) {
             header("Location: {$_SERVER['HTTP_REFERER']}");
             exit;
         } else {
@@ -88,7 +88,7 @@ class Comment
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "INSERT INTO comment (post_id, email, comment) VALUES (1,'$email', '$comment')";
+            $sql = "INSERT INTO comment (post_id, username, comment) VALUES (1,'$username', '$comment')";
 
             if ($this->connect()->query($sql) === TRUE) {
                 header("Location: {$_SERVER['HTTP_REFERER']}");
